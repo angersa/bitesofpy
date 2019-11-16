@@ -12,4 +12,4 @@ class BirthdayDict(dict):
         for date in self.values():
             if date.day == birthday.day and date.month == birthday.month:
                 print(MSG.format(name))
-        super().__setitem__(name, birthday) 
+        super().__setitem__(name, birthday)
