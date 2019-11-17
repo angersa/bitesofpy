@@ -32,7 +32,7 @@ class Color:
     def hex2rgb(cls, hex):
         """Class method that converts a hex value into an rgb one"""
         valid_char = '#1234567890abcdef'
-        conditions = (hex[0] == '#', 
+        conditions = (hex[0] == '#',
                       len(hex) == 7,
                       all(c in valid_char for c in hex))
         if not all(conditions):
@@ -54,17 +54,3 @@ class Color:
     def __str__(self):
         """Returns the string value of the color object"""
         return str(self.rgb) if self.rgb else "Unknown"
-
-
-""" 
-w = Color('white')
-
-print(w.color, w.rgb)
-print(Color.rgb2hex((255, 255, 255)))
-print(Color.hex2rgb('#stopit')) """
-print(Color.hex2rgb('#ffffff'))
-print(Color.hex2rgb('#0000ff'))
-print(Color.hex2rgb('#000000'))
-print(Color.hex2rgb('#ff0000'))
-print(Color.hex2rgb('#008000'))
-print(Color.hex2rgb('#ff8000'))
