@@ -1,20 +1,18 @@
+import itertools
+
 
 class Animal:
-    idx = 10000
-    zoo_lst = list()
+    _seq = itertools.count(10001)
+    _zoo = []
 
     def __init__(self, name):
+        self.id = next(self._seq)
         self.name = name.title()
-        Animal.idx += 1
-        Animal.zoo_lst.append(f'{Animal.idx}. {self.name}')
-
-    def add_animal(self):
-        animal = (self.idx, self.name)
-        zoo_lst.update(animal)
+        self._zoo.append(self)
 
     def __str__(self):
-        return f'{self.idx}. {self.name}'
+        return f'{self.id}. {self.name}'
 
     @classmethod
     def zoo(cls):
-        return cls.zoo_lst
+        return '\n'.join([str(animal) for animal in cls._zoo])
