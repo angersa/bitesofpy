@@ -7,3 +7,6 @@ def rotate(string, n):
         rotated.append(string[n % len(string)])
         n += 1
     return ''.join(rotated)
+
+#   Solution:
+#   return string[n:] + string[:n]
