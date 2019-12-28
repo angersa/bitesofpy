@@ -10,5 +10,5 @@ def enumerate_names_countries():
        4. Dante      Argentina
        5. Martin     USA
        6. Rodolfo    Mexico"""
-    for i, e in enumerate(zip(names, countries), 1):
-        print(f'{i}. {e[0]:11}{e[1]}')
+    for i, (name, country) in enumerate(zip(names, countries), 1):
+        print(f'{i}. {name:<10} {country}')
