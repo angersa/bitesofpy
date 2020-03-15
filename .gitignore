@@ -106,3 +106,4 @@ venv.bak/
 # PyCharm
 .idea/workspace.xml
 .idea/rSettings.xml
+.DS_Store
