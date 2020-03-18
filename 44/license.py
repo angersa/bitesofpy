@@ -14,5 +14,6 @@ import random
 import string
 
 def gen_key(parts=4, chars_per_part=8):
-    char_list = string.ascii_uppercase + '0123456789'
-    return '-'.join([''.join(random.sample(char_list, chars_per_part)) for _ in range(parts)])
+    char_list = string.ascii_uppercase + string.digits
+    return '-'.join([''.join(random.sample(char_list, chars_per_part))
+                     for _ in range(parts)])
