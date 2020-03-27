@@ -12,12 +12,12 @@ def calc_bmi(weight, length):
 def create_parser():
     """Create an ArgumentParser adding the right arguments to pass the tests,
        returns a argparse.ArgumentParser object"""
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='Calculate your BMI.')
     parser.add_argument('-w', '--weight',
-                        action='store', type=float, dest='weight',
+                        type=float,
                         help='Your weight in kg')
     parser.add_argument('-l', '--length',
-                        action='store', type=float, dest='length',
+                        type=float,
                         help='Your length in cm')
     return parser
 
